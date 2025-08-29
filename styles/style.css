@@ -1,13 +1,3 @@
-/* Css Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-  border: none;
-  outline: none;
-}
 /* Root */
 :root {
   --primary-color: #2c3e50;
@@ -19,80 +9,37 @@
   --transition: all 0.3s ease;
 }
 
-/* Global Style */
-body {
-  background-color: var(--white);
-  color: var(--text-color);
-  font-family: "Segoe UI", Tahoma, "Segoe UI", Tahoma, Geneva, Verdana,
-    sans-serif;
-  line-height: 1.6;
+.hero {
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba( 0, 0, 0, 0.5)),
+url("../images/hero-banner.jpg") center/cover;
+padding: 0 1rem;
+color: var(--white);
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 5%;
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.hero .hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba( 0, 0, 0, 0.3);
+}
+.hero .hero-content p {
+font-size: 1.2;
+margin-bottom: 2rem;
 }
 
-header .logo {
-  color: var(--primary-color);
-  font-size: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+.hero .hero-content button {
+background-color: var(--secondary-color);
+padding: 1rem 2rem;
+font-size: 1rem;
+color: var(--white);
+border-radius: 5px;
+transition: var(--transition);
 }
-header nav {
-  display: flex;
-  gap: 2rem;
+.hero .hero-content button:hover {
+  box-shadow: 0 5px 15px rgba(152, 152, 219, 0.3);
+  transform: translateY(-3px);
 }
-
-header nav a {
-  color: var(--text-color);
-  font-weight: 500;
-  transition: var(--transition);
-}
-header nav a:hover {
-  color: var(--secondary-color);
-}
-
-header .buttons {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-header .buttons button {
-  background: none;
-  font-size: 1.2rem;
-  transition: var(--transition);
-  cursor: pointer;
-}
-header .buttons button:hover {
-  color: var(--secondary-color);
-}
-header .buttons :where(#menu-btn, #close-btn) {
-  display: none;
-  font-size: 1.5rem !important;
-}
-header .buttons #cart-btn {
-    position: relative;
-}
-
-header .buttons #cart-btn span {
-    background-color: red;
-    position: absolute;
-    top: -13px;
-    right: -8px;
-    color: var(--white);
-    font-size: 0.8rem;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-}
-

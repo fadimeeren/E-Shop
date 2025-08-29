@@ -28,6 +28,7 @@ body {
 }
 
 header {
+  background-color: var(--white);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -114,6 +115,7 @@ header .buttons #cart-btn span {
         }
         header nav .active {
             display: flex;
+             background-color: white;
         }
         header .nav-active {
             box-shadow: unset !important;
