@@ -79,47 +79,56 @@ header .buttons :where(#menu-btn, #close-btn) {
   font-size: 1.5rem !important;
 }
 header .buttons #cart-btn {
-    position: relative;
+  position: relative;
 }
 
 header .buttons #cart-btn span {
-    background-color: red;
-    position: absolute;
-    top: -13px;
-    right: -8px;
-    color: var(--white);
-    font-size: 0.8rem;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
+  background-color: red;
+  position: absolute;
+  top: -13px;
+  right: -8px;
+  color: var(--white);
+  font-size: 0.8rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
 }
 
 /* Responsive Design */
 
 @media (max-width: 768px) {
-    header .buttons #menu-btn{
-        display: block;
-    }
+   /* Header */
+  header .buttons #menu-btn {
+    display: block;
+  }
+  header nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    padding: 1rem 5%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  }
+  header nav .active {
+    display: flex;
+    background-color: white;
+  }
+  header .nav-active {
+    box-shadow: unset !important;
+  }
 
-    header nav {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        position: absolute;
-        left: 0;
-        top: 100%;
-        padding: 1rem 5%;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-        }
-        header nav .active {
-            display: flex;
-             background-color: white;
-        }
-        header .nav-active {
-            box-shadow: unset !important;
-        }
-
-
+  /* Hero */
+  .hero .hero-content h1 {
+    font-size: 2.5rem;
+  }
+   .hero .hero-content p {
+    font-size: 1rem !important;
+  }
+   .hero .hero-content button {
+    font-size: 0.8rem;
+  }
 }
